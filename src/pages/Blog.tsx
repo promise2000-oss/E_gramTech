@@ -12,44 +12,38 @@ const Blog = () => {
   const blogPosts = [
     {
       image: blog1,
-      author: "Jessica Alford",
+      author: "Emily Johnson",
       title: "How To Own Web Design Agency For Free",
-      date: "Oct 22",
       excerpt: "Explore the essential steps to launching your own web design agency without breaking the bank.",
     },
     {
       image: blog2,
-      author: "Jessica Alford",
+      author: "John Martin",
       title: "5 Difficult Things About Web Design Agency",
-      date: "Oct 22",
       excerpt: "Discover the challenges every web design agency faces and how to overcome them.",
     },
     {
       image: blog3,
-      author: "Jessica Alford",
+      author: "Christopher Wilson",
       title: "Web Design Agency Is So Famous, But Why?",
-      date: "Oct 22",
       excerpt: "Understand the factors that contribute to the success and popularity of web design agencies.",
     },
     {
       image: teamMeeting,
-      author: "Jessica Alford",
+      author: "Andrew Moore",
       title: "5 Difficult Things About Web Design Agency",
-      date: "Oct 22",
       excerpt: "Learn about the common hurdles in running a web design agency and strategies to navigate them.",
     },
     {
       image: developerCoding,
-      author: "Jessica Alford",
+      author: "William Lewis",
       title: "How To Own Web Design Agency For Free",
-      date: "Oct 22",
       excerpt: "A comprehensive guide to starting a web design agency with minimal investment.",
     },
     {
       image: teamCollaboration,
       author: "Jessica Alford",
       title: "5 Difficult Things About Web Design Agency",
-      date: "Oct 22",
       excerpt: "Insights into the most challenging aspects of managing a web design agency.",
     },
   ];
@@ -57,24 +51,37 @@ const Blog = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-20">
-        <div className="h-72 w-full relative overflow-hidden">
-          <div className="absolute inset-0 bg-primary/80"></div>
-          <img
-            src={blog1}
-            alt="Blog"
-            className="w-full h-full object-cover mix-blend-overlay"
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-primary-foreground animate-fade-up">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Blog</h1>
-              <p className="max-w-xl mx-auto text-primary-foreground/80">
-                Stay updated with the latest insights, tips, and trends in web development and design.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="relative pt-20 group">
+  <div className="h-72 w-full relative overflow-hidden">
+    
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black/70 
+                    transition-colors duration-300 
+                   ">
+    </div>
+
+    {/* Image */}
+    <img
+      src={blog1}
+      alt="Blog"
+      className="w-full h-full object-cover mix-blend-overlay"
+    />
+
+    {/* Text Content */}
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="text-center text-primary-foreground animate-fade-up">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Our Blog
+        </h1>
+        <p className="max-w-xl mx-auto text-primary-foreground/80">
+          Stay updated with the latest insights, tips, and trends in web development and design.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       {/* Blog Posts Grid */}
       <section className="py-20 bg-background">
@@ -83,7 +90,7 @@ const Blog = () => {
             {blogPosts.map((post, index) => (
               <article
                 key={index}
-                className="group animate-fade-up"
+                className="group animate-fade-up group-hover:[#2047F4]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden rounded-xl mb-4">
@@ -99,22 +106,22 @@ const Blog = () => {
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">{post.excerpt}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm bg-primary text-primary-foreground px-3 py-1 rounded">
+                  {/* <span className="text-sm bg-primary text-[#2047F4]-foreground px-3 py-1 rounded">
                     {post.date}
-                  </span>
-                  <Link to="#" className="text-primary hover:underline flex items-center gap-1">
+                  </span> */}
+                  {/* <Link to="#" className="text-primary hover:underline flex items-center gap-1">
                     Read More <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </Link> */}
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button className="btn-primary">
               Load More
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
     </Layout>
