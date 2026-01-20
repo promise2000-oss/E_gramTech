@@ -31,8 +31,8 @@ const Header = () => {
     : "bg-transparent";
 
   const textColor = scrolled || !isHomePage
-    ? "text-foreground"
-    : "text-primary-foreground";
+    ? "text-white"
+    : "text-white";
 
   return (
     <header className={`fixed top-0 left-0 bg-[#242997] right-0 z-50 transition-all duration-300 ${headerBg}`}>

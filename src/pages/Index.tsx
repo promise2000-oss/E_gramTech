@@ -241,14 +241,14 @@ const Index = () => {
                 "Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht."
               </p>
               <p className="font-semibold text-lg">Alexander Gibson</p>
-              <div className="flex gap-2 mt-6">
+              {/* <div className="flex gap-2 mt-6">
                 <button className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-[#2B34A3] transition-colors">
                   ‹
                 </button>
                 <button className="w-10 h-10 rounded-full bg-[#2B34A3] text-primary-foreground flex items-center justify-center hover:bg-[#2B34A3]/90 transition-colors">
                   ›
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
